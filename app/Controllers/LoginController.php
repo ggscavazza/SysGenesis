@@ -32,11 +32,11 @@ class LoginController extends BaseController
                 $session->set($ses_data);
                 return redirect()->to('/dashboard');
             } else {
-                $session->setFlashdata('msg', 'Wrong Password');
+                $session->setFlashdata('msg', 'Email ou senha errados');
                 return redirect()->to('/login');
             }
         } else {
-            $session->setFlashdata('msg', 'Email not Found');
+            $session->setFlashdata('msg', 'Email não encontrado');
             return redirect()->to('/login');
         }
     }
